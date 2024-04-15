@@ -20,8 +20,8 @@ spec:
         runAsUser: 65534 # nobody
       containers:
         - name: admission-controller
-          image: registry.k8s.io/autoscaling/vpa-admission-controller:1.0.0
-          imagePullPolicy: Always
+          image: giantswarm/vpa-admission-controller:1.0.0
+          imagePullPolicy: IfNotPresent
           env:
             - name: NAMESPACE
               valueFrom:

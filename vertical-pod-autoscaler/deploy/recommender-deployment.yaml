@@ -20,8 +20,8 @@ spec:
         runAsUser: 65534 # nobody
       containers:
       - name: recommender
-        image: registry.k8s.io/autoscaling/vpa-recommender:1.0.0
-        imagePullPolicy: Always
+        image: giantswarm/vpa-recommender:1.0.0
+        imagePullPolicy: IfNotPresent
         resources:
           limits:
             cpu: 200m
